@@ -30,7 +30,7 @@ def printOuterProdSum(file, avgStates, statesMatrix, shift):
 
 def estimateInfoMatrix(tau, K0files, K1files):
     ''' estimate info matrix Qij based on outer product calculations '''
-    print('starting estimateInfoMatrix on K0files '+K0files+', K1files '+K1files)
+    print('starting estimateInfoMatrix on K0files '+','.join(K0files)+', K1files '+','.join(K1files))
     K0 = sum([np.load(f) for f in K0files])
     K1 = sum([np.load(f) for f in K1files])
     print('taking logm')
